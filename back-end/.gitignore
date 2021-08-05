@@ -1,0 +1,8 @@
+node_modules
+LICENSE
+README.md
+
+.env
+
+uploads/*
+!uploads/.gitkeep
