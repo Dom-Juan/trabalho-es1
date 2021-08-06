@@ -1,0 +1,180 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.blur-section {
+  /* Add the blur effect */
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+}
+
+@import url(https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap);
+
+#main-login {
+  height: 100%;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: url('../../assets/5135279cd0d19422ca10151d0f07cb6847c7076b_s2_n2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Nunito';
+}
+
+#main-login .login-title {
+  color: #fafafa;
+  text-align: center;
+  margin: 10px;
+  padding: 5px;
+}
+
+#main-login #contain {
+  border-radius: 4px;
+  max-width: 30vw;
+  margin  : 25px;
+  margin-left:90px;
+  background: #fafafa;
+}
+
+#main-login .contain-title {
+  background-color: rgba(0, 0, 0, 0.295);
+  border-radius: 4px;
+}
+
+#main-login #contain .login-register-wrapper .nav-buttons #toggleBtn{
+  border-radius: 0px;
+  margin: 12px;
+  outline: 0;
+  border-width: 0 0 2px 0px;
+  border-color: transparent;
+}
+
+#main-login #contain .login-register-wrapper .nav-buttons #toggleBtn:hover{
+  margin: 12px;
+  outline: 0;
+  border-width: 0 0 2px 0px;
+  border-color: #414040d3;
+}
+
+.extra-hover {
+  border-width: 0 0 2px 0px;
+  border-color: #414040d3;
+}
+
+.no-extra-hover {
+  border-width: 0 0 2px 0px;
+  border-color: transparent;
+}
+
+#main-login #contain .login-register-wrapper form {
+
+}
+
+#main-login #contain .login-register-wrapper form input {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  min-height: 35px;
+  border-radius: 2.5px;
+  padding: 1.4rem 1.4rem;
+  outline: 0;
+  border-width: 0 0 2px;
+  border-color: #414040d3;
+  background: #fafafa;
+}
+
+#main-login #contain .login-register-wrapper form input:focus {
+  background: #b9b8b854 !important;
+  border-color: #1094ab;
+}
+
+#main-login #contain .login-register-wrapper form input > label {
+  margin: 0 auto;
+}
+
+#main-login #contain .login-register-wrapper form .btn-group  {
+  margin: 25px;
+  display: flex;
+  justify-content: center;
+}
+
+#main-login #contain .login-register-wrapper form .btn-group #btnSubmit  {
+  width: 125px;
+  min-width: 88px;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 4px;
+  color: #fafafa;
+  background: #1094ab !important;
+  box-sizing: border-box;
+  position: relative;
+  outline: 0;
+  border: 0;
+  display: inline-block;
+  cursor: pointer;
+  user-select: none;
+  padding: 5px;
+}
+
+#main-login #contain .login-register-wrapper form #btnSubmit:hover  {
+  box-shadow: 1.5px 1.5px #a7a7a79d;
+}
+
+#forgot-panel {
+  display:flex;
+  justify-content: center;
+  margin: 5px;
+}
+
+#forgot-panel .forgot-password {
+  color: #000000;
+  letter-spacing: 1px;
+  font-size: 16px;
+  outline: 0;
+  background: transparent !important;
+  border: 0px;
+  cursor: pointer;
+  margin: 15px;
+}
+
+#forgot-panel .forgot-password:hover {
+  color: #a7a7a79d;
+  box-shadow: 1.5px #a7a7a79d;
+}
+
+@media only screen and (max-width: 920px) {
+  #main-login {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 0;
+    padding: 0;
+    background: url('../../assets/5135279cd0d19422ca10151d0f07cb6847c7076b_s2_n2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  #main-login #contain {
+    border-radius: 4px;
+    max-width: 30vw;
+    max-width: fit-content;
+    margin: auto;
+    margin-left: auto;
+    background: #fafafa;
+  }
+}
+

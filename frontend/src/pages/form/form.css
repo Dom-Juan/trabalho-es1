@@ -1,0 +1,68 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.blur-section {
+  /* Add the blur effect */
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+}
+
+@import url(https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap);
+
+#main-form {
+  height: 100%;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: #1094ab;
+  background-size: contain;
+  font-family: 'Nunito';
+}
+
+#main-form #container {
+  display: flex;
+  flex-direction: column;
+}
+
+#main-form h1 {
+  color: #fafafa;
+  margin: 10px;
+}
+
+#main-form #container .form-container {
+  width: 100%;
+  height: 100%;
+  margin: 25px auto;
+}
+
+#main-form #container .form-container form{
+  width: 75vw;
+  height: 950px;
+  background: #fafafa;
+  border-radius: 2.5px;
+  margin: 10px auto;
+}
+
+#main-form #container .form-container form .form-wrapper{
+  margin: 25px;
+
+}
+
+#main-form #container .form-container form .form-wrapper .content{
+  margin: 10px;
+  width: 100%;
+  height: 100%;
+}
+
+#main-form #container .form-container form .form-wrapper .content .list-group-check-box{
+  margin: 10px;
+  width: 100%;
+  height: 100%;
+}

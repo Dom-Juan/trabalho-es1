@@ -1,0 +1,32 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu {
+  background: transparent;
+  color: #fafafa !important;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  background: #fcb421;
+}
+
+.nav-menu a{
+  margin: 5px;
+  padding: 5px;
+  color: #fafafa;
+}
+
+.nav-menu a:focus{
+  color: #fafafa;
+}
+
+.nav-menu a:hover{
+  color: #414040d3;
+  border-width: 0 0 2px 0px;
+  border-color: #414040d3;
+}
