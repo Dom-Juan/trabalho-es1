@@ -7,6 +7,10 @@ body {
   padding: 0;
 }
 
+h2,h4 {
+  margin: 25px;
+}
+
 .blur-section {
   /* Add the blur effect */
   filter: blur(8px);
@@ -36,33 +40,42 @@ body {
   margin: 10px;
 }
 
-#main-form #container .form-container {
-  width: 100%;
-  height: 100%;
-  margin: 25px auto;
-}
+
 
 #main-form #container .form-container form{
   width: 75vw;
   height: 950px;
   background: #fafafa;
   border-radius: 2.5px;
-  margin: 10px auto;
+  font-weight: bold;
 }
 
-#main-form #container .form-container form .form-wrapper{
-  margin: 25px;
+.form-wrapper{
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-top: 15px;
 
 }
 
 #main-form #container .form-container form .form-wrapper .content{
-  margin: 10px;
   width: 100%;
   height: 100%;
+}
+
+#main-form #container .form-container form .form-wrapper .content input-group {
+  margin: 10px;
 }
 
 #main-form #container .form-container form .form-wrapper .content .list-group-check-box{
   margin: 10px;
   width: 100%;
   height: 100%;
+  font-weight: bold;
+}
+
+#main-form #container .form .content-checkbox {
+  margin: 25px;
+}
+#main-form #container .form .content-checkbox .list-group {
+  margin: 10px;
 }

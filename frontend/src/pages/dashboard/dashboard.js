@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 
 // Import de componenets
 import Navbar from '../../components/navbar/navbar';
+import Profile from '../../components/profile/profile';
 
 // Import de CSS.
 import './dashboard.css';
@@ -38,7 +39,9 @@ const Dashboard = (props) => {
               <div className="tab-content" id="nav-tabContent">
                 <div className="tab-pane fade" id="list-editar-form" role="tabpanel" aria-labelledby="list-profile-list">v</div>
                 <div className="tab-pane fade" id="list-status-form" role="tabpanel" aria-labelledby="list-messages-list">c</div>
-                <div className="tab-pane fade" id="list-perfil" role="tabpanel" aria-labelledby="list-settings-list">.d</div>
+                <div className="tab-pane fade" id="list-perfil" role="tabpanel" aria-labelledby="list-settings-list">
+                  <Profile/>
+                </div>
               </div>
             </div>
           </div>
