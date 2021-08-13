@@ -82,3 +82,21 @@ body {
   text-align: justify;
   text-justify: inter-word;
 }
+
+@media only screen and (max-width: 768px) {
+  #main-dash {
+    height: 100%;
+    width: 100%;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  #main-dash .list-menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+}

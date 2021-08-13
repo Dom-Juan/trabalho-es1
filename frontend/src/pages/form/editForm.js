@@ -12,13 +12,25 @@ import './form.css';
 import '../../misc/animations.css';
 import '../../misc/misc.css';
 
-const Form = (props) => {
+const EditForm = (props) => {
+  const id = props.location.params;
+
+  function findForm(id) {
+    // TODO 
+    // GET(id);
+  }
+
+  function submitNewForm() {
+    // TODO
+    // SUBMIT(id);
+  }
+
   return (
     <>
       <div id="main-form">
-        <Navbar isOnFormsPage={true} isCoord={false}/>
+        <Navbar isOnFormsPage={true} />
         <div id="container">
-          <h1 className="text-center noselect">Formulário a ser enviado.</h1>
+          <h1 className="text-center noselect">Formulário {id}</h1>
           <form className="form container">
             <h2 className="noselect">Dados gerais<hr className="my-2"></hr></h2>
             <div className="form-wrapper">
@@ -454,4 +466,4 @@ const Form = (props) => {
   );
 }
 
-export default Form;
+export default EditForm;
