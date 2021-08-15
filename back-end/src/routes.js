@@ -2,6 +2,9 @@ const { Router } = require('express');
 const bcrypt = require('bcrypt');
 const routes = Router();
 
+const usersController = require('./controllers/usersController');
+const formularioController = require('./controllers/formularioController');
+
 const users = []
 
 routes.get('/', (req, res) => {
@@ -12,9 +15,13 @@ routes.get('/', (req, res) => {
 //   return res.json({ msg: 'Hello World' });
 // });
 
-routes.get('/users', (req, res) => {
-  res.json(users);
-})
+// routes.get('/users', (req, res) => {
+//   res.json(users);
+// })
+
+routes.get('/users' , usersController.index);
+routes.get('/formularios' , formularioController.index);
+
 
 routes.post('/users', async (req, res) => {
   try {

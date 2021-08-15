@@ -1,23 +1,15 @@
 const app = require ('./app');
-const mysql = require('mysql');
-const db = require('./config/database')
+const connection = require('./config/connection')
 
-console.log(db.host);
-var mysqlConnection = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "",
-  database: "es1",
-  multipleStatements: true
-})
+console.log(connection)
 
-mysqlConnection.connect((err) => {
-  if(!err){
-    console.log("Conectado");
-  }else{
-    console.log("Desconectado");
-  }
-})
+// connection.connect((err) => {
+//   if(!err){
+//     console.log("Conectado");
+//   }else{
+//     console.log("Desconectado");
+//   }
+// })
 
 app.listen(3333, () => {
   console.log('Porta de acesso 3333');
