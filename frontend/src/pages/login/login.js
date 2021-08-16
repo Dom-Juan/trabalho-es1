@@ -9,8 +9,9 @@ import LoginComponent from '../../components/login/loginComponent';
 import CadComponent from '../../components/cad/cadComponent';
 import ForgotPsdComponent from '../../components/forgotPassword/forgotPassword';
 
-// Import de API.
-// TODO.
+// Import de API..
+import api from "../../api";
+import { login, loginError } from "../../auth";
 
 // Import de CSS.
 import '../../components/login/login.css';
@@ -27,6 +28,10 @@ class Login extends Component {
       showForgot: false,
       loginStatus: false,
       erro: false,
+      email: "",
+      password: "",
+      confirmPassword: "",
+      isLoading: false
     }
 
     this.addLogin = this.addLogin.bind(this);
