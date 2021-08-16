@@ -3,7 +3,7 @@ const bcrypt = require('bcrypt');
 const routes = Router();
 
 const usersController = require('./controllers/usersController');
-const formularioController = require('./controllers/formularioController');
+const FormularioController = require('./app/controllers/formularioController');
 
 const users = []
 
@@ -20,7 +20,8 @@ routes.get('/', (req, res) => {
 // })
 
 routes.get('/users' , usersController.index);
-routes.get('/formularios' , formularioController.index);
+routes.post('/formularios' , FormularioController.store);
+routes.get('/formularios', FormularioController.get);
 
 
 routes.post('/users', async (req, res) => {
