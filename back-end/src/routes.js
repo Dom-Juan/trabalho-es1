@@ -20,8 +20,10 @@ routes.get('/', (req, res) => {
 // })
 
 routes.get('/users' , usersController.index);
-routes.get('/formularios' , formularioController.index);
+routes.get('/formularios/:id', formularioController.get);
 
+routes.post('/login', usersController.login);
+routes.post('/formularios' , formularioController.store);
 
 routes.post('/users', async (req, res) => {
   try {
