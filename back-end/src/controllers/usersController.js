@@ -2,25 +2,42 @@
 const userModel = require('../models/usersModel');
 
 module.exports = {
+
+    async insert(req, res) {
+        try {
+            const user = await userModel.getByEmail(req.body.email);
+
+            if(user.length !== 0) {
+                return res.json({msg:'User already exists'})
+            }
+
+            const newUser = await userModel.insert(req.body);
+
+            return res.json(newUser);
+        } catch (error) {
+            console.log(error);
+            return res.status(500).json({ msg: 'internal server error' });
+        }
+    },
+
     async index(req, res) {
         try {
             const response = await userModel.getAll();
             if(response) return res.status(200).json({users: response});
-        } catch(e) {
-            console.log(e);
-            return res.status(400).json({msg: e});
+        } catch(erro) {
+            console.log(error);
+            return res.status(500).json({ msg: 'internal server error' });
         }
     },
 
-    async login(req, res){
-        try{
-            const response = await userModel.login(req.body.nome_usuario, req.body.senha);
+   async getById(req, res) {
+        try {
+            const response = await userModel.getById(req.userID);
             if(response) return res.status(200).json(response);
-
-        }catch(e) {
-            console.log(e);
-            return res.status(400).json({msg: e});
+        } catch(erro) {
+            console.log(error);
+            return res.status(500).json({ msg: 'internal server error' });
         }
-    }
+    },
 
 }

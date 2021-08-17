@@ -1,4 +1,4 @@
-const Forms = require('../../models/formularioModel');
+const Forms = require('../models/formularioModel');
 
 class FormsController {
   async store(req, res) {
