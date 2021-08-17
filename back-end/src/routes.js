@@ -20,8 +20,9 @@ routes.get('/', (req, res) => {
 // })
 
 routes.get('/users' , usersController.index);
+routes.post('/login', usersController.login);
 routes.post('/formularios' , FormularioController.store);
-routes.get('/formularios', FormularioController.get);
+routes.get('/formularios/:id', FormularioController.get);
 
 
 routes.post('/users', async (req, res) => {
