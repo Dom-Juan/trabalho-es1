@@ -7,19 +7,197 @@ import 'bootstrap/dist/js/bootstrap.min.js';
 // Import de componenets
 import Navbar from '../../components/navbar/navbar';
 
+// Import de API..
+import api from "../../api";
+
 // Import de CSS.
 import './form.css';
 import '../../misc/animations.css';
 import '../../misc/misc.css';
 
 const Form = (props) => {
+  // Variáveis do formulário.
+  const [nomeCoordenador, setNomeCoordenador] = useState(false);
+  const [tipoCurso, setTipoCurso] = useState(false);
+  const [semestre, setSemestre] = useState(false);
+  const [aprovacaoGrad, setAprovacaoGrad] = useState(false);
+  const [aprovacaoOpt, setAprovacaoOpt] = useState(false);
+  const [conceitos, setConceitos] = useState(false);
+  const [reprovadoTotal, setReprovadoTotal] = useState(false);
+  const [reprovadoUltimoSemestre, setReprovadoUltimoSemestre] = useState(false);
+  const [aprovaProef, setAprovaProef] = useState(false);
+  const [exameQualificador, setExameQualificador] = useState(false);
+  const [limiteQuali, setLimiteQuali] = useState(false);
+  const [limiteTese, setLimiteTese] = useState(false);
+  const [artigoAceito, setArtigoAceito] = useState(false);
+  const [artigoAguardando, setArtigoAguardando] = useState(false);
+  const [estagioArtigoSubmissao, setEstagioArtigoSubmissao] = useState(false);
+  const [estagioPesquisa, setEstagioPesquisa] = useState(false);
+  const [partiCongressoNacional, setPartiCongressoNacional] = useState(false);
+  const [particiCongressoExterior, setParticiCongressoExterior] = useState(false);
+  const [partiPesquisaExterior, setPartiPesquisaExterior] = useState(false);
+  const [algoDeclarar, setAlgoDeclarar] = useState(false);
+  const [idAluno, setIdAluno] = useState(false);
+
+  // Métodos declarados
+  function findCoordenador() {
+    //TODO
+    return undefined;
+  }
+
+  async function HandleSubmit() {
+    // Objeto a ser enviado
+    let form = {
+      id_coordenador: '',
+      tipo_curso: '',
+      semestre: '',
+      aprovacao_grad: '',
+      aprovacao_opt: '',
+      conceitos: '',
+      reprova_total: '',
+      reprova_ultimo_semestre: '',
+      aprova_proef: '',
+      exame_quali: '',
+      limite_quali: '',
+      limite_tese: '',
+      artigos_aceito: '',
+      artigos_aguardando: '',
+      estagio_artigo_submissao: '',
+      estagio_pesquisa: '',
+      participou_congresso_nacional: '',
+      participou_congresso_exterior: '',
+      participou_pesquisa_exterior: '',
+      algo_declarar: '',
+      id_aluno: ''
+    }
+
+    try {
+      await api
+      .post(`/formulario/${form.id_aluno}`, {
+        id_coordenador: '',
+        tipo_curso: '',
+        semestre: '',
+        aprovacao_grad: '',
+        aprovacao_opt: '',
+        conceitos: '',
+        reprova_total: '',
+        reprova_ultimo_semestre: '',
+        aprova_proef: '',
+        exame_quali: '',
+        limite_quali: '',
+        limite_tese: '',
+        artigos_aceito: '',
+        artigos_aguardando: '',
+        estagio_artigo_submissao: '',
+        estagio_pesquisa: '',
+        participou_congresso_nacional: '',
+        participou_congresso_exterior: '',
+        participou_pesquisa_exterior: '',
+        algo_declarar: '',
+        id_aluno: ''
+      })
+      .then((response) => {
+        alert("Formulário enviado!!!");
+      })
+      //login(response.data.token);
+      props.history.push("/dashboard");
+    } catch (e) {
+      console.log(e);
+      console.log(e.res.status(400).json({ msg: e }));
+    }
+  }
+
+  function HandleNomeCoordenador(e) {
+    setNomeCoordenador(e.target.value);
+  }
+
+  function HandleTipoCurso(e) {
+    setTipoCurso(e.target.value);
+  }
+
+  function HandleSemestre(e) {
+    setSemestre(e.target.value);
+  }
+
+  function HandleAprovacaoGrad(e) {
+    setAprovacaoGrad(e.target.value);
+  }
+
+  function HandleAprovacaoOpt(e) {
+    setAprovacaoOpt(e.target.value);
+  }
+
+  function HandleConceitos(e) {
+    setConceitos(e.target.value);
+  }
+
+  function HandleReprovadoTotal(e) {
+    setReprovadoTotal(e.target.value);
+  }
+
+  function HandleReprovadoUltimoSemestre(e) {
+    setReprovadoUltimoSemestre(e.target.value);
+  }
+
+  function HandleAprovaProef(e) {
+    setAprovaProef(e.target.value);
+  }
+
+  function HandleExameQualificador(e) {
+    setExameQualificador(e.target.value);
+  }
+
+  function HandleLimiteQuali(e) {
+    setLimiteQuali(e.target.value);
+  }
+
+  function HandleLimiteTese(e) {
+    setLimiteTese(e.target.value);
+  }
+
+  function HandleArtigoAceito(e) {
+    setArtigoAceito(e.target.value);
+  }
+
+  function HandleArtigoAguardando(e) {
+    setArtigoAguardando(e.target.value);
+  }
+
+  function HandleEstagioArtigoSubmissao(e) {
+    setEstagioArtigoSubmissao(e.target.value);
+  }
+
+  function HandleEstagioPesquisa(e) {
+    setEstagioPesquisa(e.target.value);
+  }
+
+  function HandlePesquisaExterior(e) {
+    setPartiPesquisaExterior(e.target.value);
+  }
+
+  function HandlePartiCongressoNacional(e) {
+    setPartiCongressoNacional(e.target.value);
+  }
+
+  function HandleParticiCongressoExterior(e) {
+    setParticiCongressoExterior(e.target.value);
+  }
+
+  function HandleCoordenador(e) {
+    setAlgoDeclarar(e.target.value);
+  }
+
+  function HandleIdAluno(e) {
+    setIdAluno(e.target.value);
+  }
+
   return (
     <>
       <div id="main-form">
-        <Navbar isOnFormsPage={true} isCoord={false}/>
+        <Navbar isOnFormsPage={true} isCoord={false} />
         <div id="container">
           <h1 className="text-center noselect">Formulário a ser enviado.</h1>
-          <form className="form container">
+          <form className="form container" onSubmit={HandleSubmit}>
             <h2 className="noselect">Dados gerais<hr className="my-2"></hr></h2>
             <div className="form-wrapper">
               <div className="input-group form-floating">
@@ -444,7 +622,7 @@ const Form = (props) => {
 
             <div className="btn-group">
               <div className="btn-div-size">
-                <button type="button" className="btn btnSubmitO" id="btnSubmit">Enviar</button>
+                <button type="submit" className="btn btnSubmitO" id="btnSubmit">Enviar</button>
               </div>
             </div>
           </form>
