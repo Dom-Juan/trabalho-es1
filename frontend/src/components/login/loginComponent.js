@@ -67,32 +67,32 @@ const LoginComponent = (props) => {
     }
   }
 
-  function handleChangeEmail (event) {
+  function HandleChangeEmail (event) {
     setEmail(event.target.value)
   };
 
-  function handleChangePassword (event) {
+  function HandleChangePassword (event) {
     setPassword(event.target.value)
   };
 
-  function handleSubmit (event) {
+  function HandleSubmit (event) {
     event.preventDefault();
     auth(email, password);
   };
 
   return (
-    <form action="" id="loginForm" className={`${(props.showLogin === false) ? "nodisplay" : "showdisplay animadoDireitaParaEsquerda"}`} onSubmit={handleSubmit}>
+    <form action="" id="loginForm" className={`${(props.showLogin === false) ? "nodisplay" : "showdisplay animadoDireitaParaEsquerda"}`} onSubmit={HandleSubmit}>
       <h3 className="text-center noselect">Login</h3>
       <div className="input-group form-floating">
-        <input type="email" className="form-control" id="floatingInput" placeholder="Email" aria-label="Email" onChange={handleChangeEmail}/>
+        <input type="email" className="form-control" id="floatingInput" placeholder="Email" aria-label="Email" onChange={HandleChangeEmail}/>
         <label className="noselect" htmlFor="floatingInput">Email</label>
       </div>
       <div className="input-group form-floating text-center">
-        <input type="password" className="form-control" id="floatingInput" placeholder="Senha" aria-label="Senha" onChange={handleChangePassword}/>
+        <input type="password" className="form-control" id="floatingInput" placeholder="Senha" aria-label="Senha" onChange={HandleChangePassword}/>
         <label className="noselect" htmlFor="floatingInput">Senha</label>
       </div>
       <div className="btn-group">
-        <button type="button" className="btn" id="btnSubmit" type="submit">Login</button>
+        <button className="btn" id="btnSubmit" type="submit">Login</button>
       </div>
     </form>
   );
