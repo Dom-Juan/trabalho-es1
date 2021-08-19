@@ -18,6 +18,6 @@ export const loginError = token => {
 }
 
 export const logout = () => {
-	alert("Saindo do painel Admin...");
+	alert("Realizando logout...");
   localStorage.removeItem(TOKEN_KEY);
 };

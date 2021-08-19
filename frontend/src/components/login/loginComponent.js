@@ -1,4 +1,4 @@
-import React, {Component, useState } from 'react';
+import React, { Component, useState } from 'react';
 import { useHistory } from 'react-router';
 // Import de libs de react.
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -34,6 +34,8 @@ const LoginComponent = (props) => {
       history.push("/dashboard");
     } catch (error) {
       console.log(error);
+      setLoginStatus(false);
+      loginError(null);
       if (error.response.status === 400) {
         setLoginStatus(false);
         setErro("Erro de request no sistema, digitou os dados corretos ?");
@@ -62,20 +64,20 @@ const LoginComponent = (props) => {
         setLoginStatus(false);
         setErro("Erro genérico.");
       }
-      this.setState({ loginStatus: false});
+      setLoginStatus(false);
       loginError(null);
     }
   }
 
-  function HandleChangeEmail (event) {
+  function HandleChangeEmail(event) {
     setEmail(event.target.value)
   };
 
-  function HandleChangePassword (event) {
+  function HandleChangePassword(event) {
     setPassword(event.target.value)
   };
 
-  function HandleSubmit (event) {
+  function HandleSubmit(event) {
     event.preventDefault();
     auth(email, password);
   };
@@ -84,15 +86,24 @@ const LoginComponent = (props) => {
     <form action="" id="loginForm" className={`${(props.showLogin === false) ? "nodisplay" : "showdisplay animadoDireitaParaEsquerda"}`} onSubmit={HandleSubmit}>
       <h3 className="text-center noselect">Login</h3>
       <div className="input-group form-floating">
-        <input type="email" className="form-control" id="floatingInput" placeholder="Email" aria-label="Email" onChange={HandleChangeEmail}/>
+        <input type="email" className="form-control" id="floatingInput" placeholder="Email" aria-label="Email" onChange={HandleChangeEmail} />
         <label className="noselect" htmlFor="floatingInput">Email</label>
       </div>
       <div className="input-group form-floating text-center">
-        <input type="password" className="form-control" id="floatingInput" placeholder="Senha" aria-label="Senha" onChange={HandleChangePassword}/>
+        <input type="password" className="form-control" id="floatingInput" placeholder="Senha" aria-label="Senha" onChange={HandleChangePassword} />
         <label className="noselect" htmlFor="floatingInput">Senha</label>
       </div>
       <div className="btn-group">
         <button className="btn" id="btnSubmit" type="submit">Login</button>
+      </div>
+      <div id="text-forgot-panel">
+        <p>
+          {loginStatus === true
+            ? `Logado com sucesso`
+            : loginStatus === false
+              ? erro
+              : ``}
+        </p>
       </div>
     </form>
   );

@@ -17,27 +17,27 @@ import '../../misc/misc.css';
 
 const Form = (props) => {
   // Variáveis do formulário.
-  const [nomeCoordenador, setNomeCoordenador] = useState(false);
-  const [tipoCurso, setTipoCurso] = useState(false);
-  const [semestre, setSemestre] = useState(false);
-  const [aprovacaoGrad, setAprovacaoGrad] = useState(false);
-  const [aprovacaoOpt, setAprovacaoOpt] = useState(false);
-  const [conceitos, setConceitos] = useState(false);
-  const [reprovadoTotal, setReprovadoTotal] = useState(false);
-  const [reprovadoUltimoSemestre, setReprovadoUltimoSemestre] = useState(false);
-  const [aprovaProef, setAprovaProef] = useState(false);
-  const [exameQualificador, setExameQualificador] = useState(false);
-  const [limiteQuali, setLimiteQuali] = useState(false);
-  const [limiteTese, setLimiteTese] = useState(false);
-  const [artigoAceito, setArtigoAceito] = useState(false);
-  const [artigoAguardando, setArtigoAguardando] = useState(false);
-  const [estagioArtigoSubmissao, setEstagioArtigoSubmissao] = useState(false);
-  const [estagioPesquisa, setEstagioPesquisa] = useState(false);
-  const [partiCongressoNacional, setPartiCongressoNacional] = useState(false);
-  const [particiCongressoExterior, setParticiCongressoExterior] = useState(false);
-  const [partiPesquisaExterior, setPartiPesquisaExterior] = useState(false);
-  const [algoDeclarar, setAlgoDeclarar] = useState(false);
-  const [idAluno, setIdAluno] = useState(false);
+  const [nomeCoordenador, setNomeCoordenador] = useState('');
+  const [tipoCurso, setTipoCurso] = useState('');
+  const [semestre, setSemestre] = useState('');
+  const [aprovacaoGrad, setAprovacaoGrad] = useState('');
+  const [aprovacaoOpt, setAprovacaoOpt] = useState('');
+  const [conceitos, setConceitos] = useState('');
+  const [reprovadoTotal, setReprovadoTotal] = useState('');
+  const [reprovadoUltimoSemestre, setReprovadoUltimoSemestre] = useState();
+  const [aprovaProef, setAprovaProef] = useState('');
+  const [exameQualificador, setExameQualificador] = useState('');
+  const [limiteQuali, setLimiteQuali] = useState('');
+  const [limiteTese, setLimiteTese] = useState('');
+  const [artigoAceito, setArtigoAceito] = useState('');
+  const [artigoAguardando, setArtigoAguardando] = useState('');
+  const [estagioArtigoSubmissao, setEstagioArtigoSubmissao] = useState('');
+  const [estagioPesquisa, setEstagioPesquisa] = useState('');
+  const [partiCongressoNacional, setPartiCongressoNacional] = useState('');
+  const [particiCongressoExterior, setParticiCongressoExterior] = useState('');
+  const [partiPesquisaExterior, setPartiPesquisaExterior] = useState('');
+  const [algoDeclarar, setAlgoDeclarar] = useState('');
+  const [idAluno, setIdAluno] = useState('');
 
   // Métodos declarados
   function findCoordenador() {

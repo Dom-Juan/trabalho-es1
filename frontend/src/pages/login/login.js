@@ -80,15 +80,6 @@ class Login extends Component {
               </div>
               <div id="forgot-panel">
                 <a className="forgot-password text-center noselect" onClick={this.addForgotPsd} href="#forgot">Já possui cadastro e esqueceu a senha ?</a>
-                <div id="text-forgot-panel">
-                  <p>
-                    {this.state.loginStatus === true
-                      ? `Logado com sucesso`
-                      : this.state.loginStatus === false
-                        ? this.state.erro
-                        : ``}
-                  </p>
-                </div>
               </div>
             </div>
           </div>
