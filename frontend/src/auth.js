@@ -1,6 +1,6 @@
 
 // Tokens para validação.
-export const TOKEN_KEY = null;
+export const TOKEN_KEY = "my_secret";
 export const USER_ID = null;
 
 // Métodos de autenticação.

@@ -1,5 +1,5 @@
 import React, {Component, useState } from 'react';
-
+import { useHistory } from 'react-router';
 // Import de libs de react.
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
@@ -20,18 +20,18 @@ const LoginComponent = (props) => {
   const [erro, setErro] = useState(false);
   const [loginStatus, setLoginStatus] = useState(false);
 
+  let history = useHistory();
+
   async function auth(email, password) {
     try {
-      await api
-      .post("/login", {
-        name: email,
-        password: password
-      })
-      .then((response) => {
+      await api.post("/session", {
+        email: email,
+        senha: password,
+      }).then((response) => {
         setLoginStatus(true)
       })
       //login(response.data.token);
-      props.history.push("/dashboard");
+      history.push("/dashboard");
     } catch (error) {
       console.log(error);
       if (error.response.status === 400) {
