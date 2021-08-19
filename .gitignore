@@ -1,0 +1,9 @@
+node_modules
+.vscode
+LICENSE
+README.md
+
+.env
+
+uploads/*
+!uploads/.gitkeep
