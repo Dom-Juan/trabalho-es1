@@ -1,4 +1,13 @@
 # trabalho-es1
+## Integrantes do grupo:
+
+    Juan Cardoso da Silva
+    Felipe Sousa Canuto dos Santos
+    João Guilherme Ferreira Tonhon
+    Nícolas Matias
+    Carlos Eduardo Gomes Miranda
+    Carlos Alberto Caetano da Silva Filho
+
 ### Trabalho de engenharia de software 1
 
 Para utilizar a aplicação é necessário ter node js instalado.
