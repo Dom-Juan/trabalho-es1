@@ -15,11 +15,7 @@ class SessionController {
         return res.status(401).json({ error: 'Password does not match'});
       }
 
-<<<<<<< HEAD
       const { numero_usp, nome, email, nivel} = user[0];
-=======
-      const { numero_usp, nome, email} = user[0];
->>>>>>> 1d260686591a8f2cbc2bea68bde6854e43d6df33
 
       return res.json({
         user:{
@@ -28,11 +24,7 @@ class SessionController {
           email,
           nivel,
         },
-<<<<<<< HEAD
         token: jwt.sign({numero_usp, nivel}, authConfig.secret, {
-=======
-        token: jwt.sign({numero_usp}, authConfig.secret, {
->>>>>>> 1d260686591a8f2cbc2bea68bde6854e43d6df33
           expiresIn: authConfig.expiresIn
         })
       })
