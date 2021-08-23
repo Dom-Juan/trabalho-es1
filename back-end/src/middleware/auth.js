@@ -17,7 +17,8 @@ module.exports = {
     try {
       const decoded = await promisify(jwt.verify)(token, authConfig.secret);
 
-      req.userID = decoded.id;
+      req.userID = decoded.numero_usp;
+      req.userLever = decoded.nivel;
 
       return next();
     } catch (error) {

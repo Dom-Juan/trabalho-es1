@@ -29,6 +29,23 @@ class FormsController {
       return res.status(500).json({ msg: 'internal server error' });
     }
   }
+
+  async getAll(req, res) {
+    try {
+      
+      if(req.userLever === 3) {
+        return res.status(403).json({ msg: 'forbidden' });
+      }
+
+      const getAll = await Forms.getAll();
+      
+      return res.status(200).json(getAll);
+
+    } catch (error) {
+      console.log(error);
+      return res.status(500).json({ msg: 'internal server error' });
+    }
+  }
 }
 
 module.exports = new FormsController();

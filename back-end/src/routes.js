@@ -15,6 +15,6 @@ routes.get('/usersid',sessionMiddlware.auth, usersController.getById);
 
 
 routes.post('/formularios',sessionMiddlware.auth, FormularioController.store);
-//routes.get('/formularios/:id', FormularioController.get);
+routes.get('/formularios',sessionMiddlware.auth, FormularioController.getAll);
 
 module.exports = routes;
